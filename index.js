@@ -57,6 +57,27 @@ async function run() {
             res.send(result);
         })
 
+        // put
+        app.put('/inventory/:id', async(req, res) => {
+            const id = req.params.id;
+            const updateItem = req.body;
+            const filter = {_id: ObjectId(id)};
+            const options = { upsert: true};
+            const updateDoc = {
+                $set: {
+                    name: updateItem.name,
+                    description: updateItem.description,
+                    url: updateItem.url,
+                    supplier: updateItem.supplier,
+                    price: updateItem.price,
+                    quantity: updateItem.quantity
+                }
+            };
+            const result = await itemCollection.updateOne(filter, updateDoc, options);
+            res.send(result);
+            console.log(result)
+        })
+
         // delete
         app.delete('')
         console.log('server connected')
