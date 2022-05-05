@@ -56,6 +56,11 @@ async function run() {
             const result = await itemCollection.insertOne(newUser);
             res.send(result);
         })
+        app.post('/feedback', async(req, res) => {
+            const newFeedback = req.body;  
+            const result = await feedbackCollection.insertOne(newFeedback);
+            res.send(result);
+        })
 
         // put
         app.put('/inventory/:id', async(req, res) => {
@@ -85,7 +90,7 @@ async function run() {
             const result = await itemCollection.deleteOne(query);
             res.send(result);
         })
-        
+
         console.log('server connected')
     }
     finally {
