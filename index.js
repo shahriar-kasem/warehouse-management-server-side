@@ -15,16 +15,28 @@ async function run() {
     try {
         await client.connect();
         const itemCollection = client.db('warehouseManagement').collection('items');
-        const feedbackCollection = client.db('warehousemanagement').collection('feedback');
+        const serviceCollection = client.db('warehouseManagement').collection('service');
+        const feedbackCollection = client.db('warehouseManagement').collection('feedback');
 
-        // get method
+        // get
         app.get('/inventory', async(req, res) => {
             const query = {};
             const cursor = itemCollection.find(query);
             const result = await cursor.toArray();
             res.send(result)
         })
-
+        app.get('/service', async(req,res) => {
+            const query = {};
+            const cursor = serviceCollection.find(query);
+            const result = await cursor.toArray();
+            res.send(result);
+        })
+        app.get('/feedback', async(req,res) => {
+            const query = {};
+            const cursor = feedbackCollection.find(query);
+            const result = await cursor.toArray();
+            res.send(result);
+        })
         console.log('server connected')
     }
     finally {
