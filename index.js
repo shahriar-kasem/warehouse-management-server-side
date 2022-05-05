@@ -49,6 +49,16 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result);
         })
+
+        // post
+        app.post('/inventory', async(req, res) => {
+            const newUser = req.body;  
+            const result = await itemCollection.insertOne(newUser);
+            res.send(result);
+        })
+
+        // delete
+        app.delete('')
         console.log('server connected')
     }
     finally {
