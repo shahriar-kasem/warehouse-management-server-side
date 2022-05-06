@@ -17,6 +17,7 @@ async function run() {
         const itemCollection = client.db('warehouseManagement').collection('items');
         const serviceCollection = client.db('warehouseManagement').collection('service');
         const feedbackCollection = client.db('warehouseManagement').collection('feedback');
+        const blogCollection = client.db('warehouseManagement').collection('blog');
 
         // get
         app.get('/inventory', async(req, res) => {
@@ -59,6 +60,11 @@ async function run() {
         app.post('/feedback', async(req, res) => {
             const newFeedback = req.body;  
             const result = await feedbackCollection.insertOne(newFeedback);
+            res.send(result);
+        })
+        app.post('/blog', async(req, res) => {
+            const newBlog = req.body;
+            const result = await blogCollection.insertOne(newBlog)
             res.send(result);
         })
 
