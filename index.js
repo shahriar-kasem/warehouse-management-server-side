@@ -72,7 +72,6 @@ async function run() {
             const newBlog = req.body;
             const result = await blogCollection.insertOne(newBlog)
             res.send(result);
-            console.log(result)
         })
 
         // put
