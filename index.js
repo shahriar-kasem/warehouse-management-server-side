@@ -50,6 +50,12 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result);
         })
+        app.get('/blog', async(req, res) => {
+            const query = {};
+            const cursor = blogCollection.find(query);
+            const result = await cursor.toArray();
+            res.send(result);
+        })
 
         // post
         app.post('/inventory', async(req, res) => {
