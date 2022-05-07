@@ -19,6 +19,7 @@ async function run() {
         const serviceCollection = client.db('warehouseManagement').collection('service');
         const feedbackCollection = client.db('warehouseManagement').collection('feedback');
         const blogCollection = client.db('warehouseManagement').collection('blog');
+        const subscriberCollection = client.db('warehouseManagement').collection('subscribe');
 
         // get
         app.get('/inventory', async(req, res) => {
@@ -72,6 +73,11 @@ async function run() {
         app.post('/blog', async(req, res) => {
             const newBlog = req.body;
             const result = await blogCollection.insertOne(newBlog)
+            res.send(result);
+        })
+        app.post('/subscribe', async(req, res) => {
+            const newSubscriber = req.body;
+            const result = await subscriberCollection.insertOne(newSubscriber);
             res.send(result);
         })
 
