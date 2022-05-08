@@ -149,7 +149,6 @@ async function run() {
             const result = await itemCollection.deleteOne(query);
             res.send(result);
         })
-
         console.log('server connected')
     }
     finally {
