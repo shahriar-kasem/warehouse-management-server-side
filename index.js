@@ -28,6 +28,13 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result)
         })
+        app.get('/myitem', async(req, res) => {
+            const email = req.query.email;
+            const query = {email};
+            const cursor = itemCollection.find(query);
+            const result = await cursor.toArray();
+            res.send(result);
+        })
         app.get('/inventory/:id', async(req, res) => {
             const id = req.params.id;
             const query = {_id: ObjectId(id)};
@@ -121,7 +128,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello. warehouse-management-server-side is working!')
+    res.send('Hello. BBl-warehouse-management-server-side is working!')
 })
 
 app.listen(port, () => {
