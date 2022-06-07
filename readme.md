@@ -9,8 +9,16 @@ Click here: https://github.com/shahriar-kasem/warehouse-management-client-side
 ## [Repo link server-side](https://github.com/shahriar-kasem/warehouse-management-server-side)
 Click here: https://github.com/shahriar-kasem/warehouse-management-server-side
 
-### Notes: 
-`In this website you can add item on warehouse and after delivery you can reduce item quantity easily. If you want you can also add item quantity. You can add new items from 'Add new item' page. You can manage inventory items from 'Manage inventory' page. You can also see your added items list on 'My items' page. You can give and see our customer feedbacks on 'Customer feedback' page. You can also read and write blogs from 'Blog' page.`
+### Website overview:
+* Developed a full-stack project for warehouse management with Authorization facilities
+* Accelerated warehouse management productivity and very easy to use
+* Implemented a New Item route for adding new products
+* People can manage inventory from the Manage Inventory page
+* People can check their added items on the My Items route
+* People can reduce available item quantity easily
+* People can increase item quantity easily
+* Customers can see and give feedback from the Feedback route
+* Blog page is available for reading website information
 
 ### framework/library used in this website:
 * React
