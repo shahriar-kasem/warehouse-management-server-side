@@ -4,10 +4,10 @@
 Click here: https://warehouse-management-4ec03.web.app/
 
 ## [Repo link client-side](https://github.com/shahriar-kasem/warehouse-management-client-side)
-Click here: https://github.com/shahriar-kasem/warehouse-management-client-side
+Click here: https://github.com/shahriarkasem/warehouse-management-client-side
 
 ## [Repo link server-side](https://github.com/shahriar-kasem/warehouse-management-server-side)
-Click here: https://github.com/shahriar-kasem/warehouse-management-server-side
+Click here: https://github.com/shahriarkasem/warehouse-management-server-side
 
 ### Website overview:
 * Developed a full-stack project for warehouse management with Authorization facilities
